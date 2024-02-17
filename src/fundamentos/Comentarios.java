@@ -22,8 +22,8 @@ public class Comentarios {
 		
 		System.out.println("Fim");// Aqui tb funciona!
 		
-		/*
-		 * Comentar um código em ambiente profissional é não algo muito legal.
+		/* 
+		 * Comentar um código em ambiente profissional não algo muito legal.
 		 * não é indicado fazer a menos que a empresa em que você trabalha exija isso.
 		 * Mas no ambiente de aprendizado é altamente indicado fazer comentarios pois irá ajuda-lo 
 		 * a memorizar o que se está aprendendo.
