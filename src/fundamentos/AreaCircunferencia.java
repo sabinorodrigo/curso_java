@@ -13,5 +13,11 @@ public class AreaCircunferencia {
 		area = PI * raio * raio;
 		
 		System.out.println("Área = " + area + "m2.");
+		
+		// Sintaxe:
+		//<tipo> <nome> = <valor incial>;
+		// Exemplos:
+		
+		int idade = 25;
 	}
 }
