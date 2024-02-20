@@ -17,7 +17,5 @@ public class AreaCircunferencia {
 		// Sintaxe:
 		//<tipo> <nome> = <valor incial>;
 		// Exemplos:
-		
-		int idade = 25;
 	}
 }
