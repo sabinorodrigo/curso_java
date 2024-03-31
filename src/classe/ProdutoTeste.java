@@ -4,10 +4,7 @@ public class ProdutoTeste {
 	
 	public static void main(String[] args) {
 		
-		Produto p1 = new Produto();
-		p1.nome = "Notebook";
-		p1.preco = 4356.89;
-		p1.desconto = 0.25;
+		Produto p1 = new Produto("Notebook", 4356.89, 0.25);
 		
 		var p2 = new Produto();
 		p2.nome = "Caneta Preta";
@@ -17,12 +14,12 @@ public class ProdutoTeste {
 		System.out.println(p1.nome);
 		System.out.println(p2.nome);
 		
-		double precoFinal1 = p1.preco * (1 - p1.desconto);
-		double precoFinal2 = p2.preco * (1 - p2.desconto);
+		double precoFinal1 = p1.precoComDesconto(0.1);
+		double precoFinal2 = p2.precoComDesconto();
 		double mediaCarrinho = (precoFinal1 + precoFinal2) / 2;
 		
 		System.out.printf("Média do carrinho é %.2f%n", mediaCarrinho);
-		System.out.println(precoFinal1);
-		System.out.println(precoFinal2);
+		System.out.printf("Preco com desconto do gerente: %.2f%n", precoFinal1);
+		System.out.printf("Preco sem desconto do gerente: %.2f ", precoFinal2);
 	}
 }
