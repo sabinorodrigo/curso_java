@@ -1,7 +1,5 @@
 package classe;
 
-import java.util.Date;
-
 public class Equals {
 
 	public static void main(String[] args) {
@@ -18,7 +16,7 @@ public class Equals {
 		System.out.println(u1.equals(u2));
 		System.out.println(u2.equals(u1));
 		
-		System.out.println(u2.equals(new Date()));
+		//System.out.println(u2.equals(new Date()));
 		
 	}
 }
