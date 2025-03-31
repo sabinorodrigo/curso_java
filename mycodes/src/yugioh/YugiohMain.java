@@ -3,6 +3,8 @@ package yugioh;
 import java.util.ArrayList;
 import java.util.List;
 
+import yugioh.monster.Monster;
+
 public class YugiohMain {
 
 	public static void main(String[] args) {

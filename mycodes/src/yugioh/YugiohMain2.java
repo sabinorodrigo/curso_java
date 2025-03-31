@@ -2,6 +2,8 @@ package yugioh;
 
 import java.util.Scanner;
 
+import yugioh.monster.Monster;
+
 public class YugiohMain2 {
 
 	public static void main(String[] args) {

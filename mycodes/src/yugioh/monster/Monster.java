@@ -1,4 +1,4 @@
-package yugioh;
+package yugioh.monster;
 
 public class Monster {
 
