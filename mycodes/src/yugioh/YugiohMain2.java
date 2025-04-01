@@ -1,26 +1,35 @@
 package yugioh;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
-import yugioh.monster.Monster;
+import yugioh.card.Card;
+import yugioh.monster.CelticGuardian;
+import yugioh.monster.DarkMagician;
+import yugioh.monster.SummonedSkull;
 
 public class YugiohMain2 {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+
+		Card summonedSkull = new SummonedSkull("Summoned Skull", "Monster", "Dark", "Fiend/Normal",
+				6, 2500, 1200);
 		
-		int qtdeMonster = 3;
-		Monster[] m = new Monster[3];
+		Card darkMagician = new DarkMagician("Dark Magician", "Monster", "Dark", "Spellcaster"
+				, 7, 2500, 2100);
+		
+		Card celticGuadian = new CelticGuardian("Celtic Guardian", "Monster", "Earth", "Warrior/Normal", 
+				4, 1400, 1200);
 		
 		
-		for (int i = 0; i < m.length; i++) {
-			System.out.print("Qual monstro você quer? ");
-		}
+		List<Card> listCards = new ArrayList<>();
 		
+		listCards.add(summonedSkull);
+		listCards.add(darkMagician);
+		listCards.add(celticGuadian);
 		
-		sc.close();
-		
+		listCards.forEach(System.out::println);
 	}
 	
 }
