@@ -1,4 +1,4 @@
-package com.rsg.startspringboot.models;
+package com.rsg.startspringboot.model.entity;
 
 public class Cliente {
 
