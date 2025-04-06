@@ -1,6 +1,6 @@
 package yugioh.card;
 
-public class Card {
+public abstract class Card {
 
 	protected String name;
 	protected String cardType;

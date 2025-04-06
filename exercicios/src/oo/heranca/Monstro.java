@@ -6,7 +6,7 @@ public class Monstro extends Jogador {
 		this(0, 0);
 	}
 	
-	Monstro(int x, int y) {
+	public Monstro(int x, int y) {
 		super(x, y);
 	}
 }
