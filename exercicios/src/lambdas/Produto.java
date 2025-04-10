@@ -12,5 +12,8 @@ public class Produto extends Object {
 		DESCONTO = desconto;
 	}
 	
+	public String toString() {
+		return NOME + " tem preço de R$" + PRECO;
+	}
 	
 }
