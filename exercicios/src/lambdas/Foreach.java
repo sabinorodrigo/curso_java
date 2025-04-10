@@ -27,7 +27,7 @@ public class Foreach {
 		System.out.println("\nMethod Reference #2...");
 		aprovados.forEach(Foreach::meuImprimir);
 	}
-	
+
 	public static void meuImprimir(String nome) {
 		System.out.println("Oi meu nome é " + nome);
 	}
