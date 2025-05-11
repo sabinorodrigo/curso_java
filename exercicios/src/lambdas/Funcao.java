@@ -17,7 +17,7 @@ public class Funcao {
 		Function<String, String> emocionado =
 				valor -> valor + "!!!";
 				
-		String resultadoFinal = 
+		String resultadoFinal =
 				parOuImpar
 				.andThen(oResultadoE)
 				.andThen(emocionado)
