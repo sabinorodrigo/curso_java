@@ -93,3 +93,8 @@ nb-configuration.xml
 ## aplication.properties
 ##############################
 application.properties
+
+##############################
+## persistence.xml
+##############################
+persistence.xml
