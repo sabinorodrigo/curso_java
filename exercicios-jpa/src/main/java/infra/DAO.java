@@ -11,7 +11,7 @@ public class DAO<E> {
 
 	private static EntityManagerFactory emf;
 	private EntityManager em;
-	Class<E> classe;
+	private Class<E> classe;
 	
 	static {
 		try {
@@ -28,6 +28,10 @@ public class DAO<E> {
 	public DAO(Class<E> classe) {
 		this.classe = classe;
 		em = emf.createEntityManager();
+	}
+	
+	public E obterPorID(Object id) {
+		return em.find(classe, id);
 	}
 	
 	public DAO<E> abrirT() {

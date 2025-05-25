@@ -1,33 +1,35 @@
-package model.basico;
+package model.umpraum;
 
-import jakarta.persistence.Column;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "produtos", schema = "curso_java")
-public class Produto {
+@Table(name = "clientes")
+public class Cliente {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name = "prod_nome", length = 200, nullable = false)
+
 	private String nome;
-	
-	@Column(name = "prod_preco", nullable = false, precision = 11)
-	private Double preco;
-	
-	public Produto() {
+
+	@OneToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "assento_id", unique = true)
+	private Assento assento;
+
+	public Cliente() {
 	}
 
-	public Produto(String nome, Double preco) {
+	public Cliente(String nome, Assento assento) {
 		super();
 		this.nome = nome;
-		this.preco = preco;
+		this.assento = assento;
 	}
 
 	public Long getId() {
@@ -46,12 +48,12 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public Double getPreco() {
-		return preco;
+	public Assento getAssento() {
+		return assento;
 	}
 
-	public void setPreco(Double preco) {
-		this.preco = preco;
+	public void setAssento(Assento assento) {
+		this.assento = assento;
 	}
-	
+
 }

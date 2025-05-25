@@ -1,33 +1,31 @@
-package model.basico;
+package model.umpraum;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "produtos", schema = "curso_java")
-public class Produto {
+@Table(name = "assentos")
+public class Assento {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name = "prod_nome", length = 200, nullable = false)
+
 	private String nome;
-	
-	@Column(name = "prod_preco", nullable = false, precision = 11)
-	private Double preco;
-	
-	public Produto() {
+
+	@OneToOne(mappedBy = "assento")
+	private Cliente cliente;
+
+	public Assento() {
 	}
 
-	public Produto(String nome, Double preco) {
+	public Assento(String nome) {
 		super();
 		this.nome = nome;
-		this.preco = preco;
 	}
 
 	public Long getId() {
@@ -46,12 +44,12 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public Double getPreco() {
-		return preco;
+	public Cliente getCliente() {
+		return cliente;
 	}
 
-	public void setPreco(Double preco) {
-		this.preco = preco;
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
-	
+
 }
